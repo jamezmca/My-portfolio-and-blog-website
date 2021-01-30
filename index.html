@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=devide-width, intital-scale=1.0">
+        <title>DevJames Portfolio Website</title>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <!--integrity="sha256-46qynGAkLSFpVbEbog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"> -->
+        
+        <!-- update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                    <img src="img/sunrise.jpg" alt="Dev James">
+                </div>
+                <button class="nav-toggle" aria-label="toggle navitagor">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                    </ul>
+                </nav>
+        </header>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Kia Ora, I am <strong>James McArthur</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">engineer & software developer</p>
+            <img src ="img/jamesmcarthur3.jpg" alt="As I wake up in the morning." class="intro__img">
+        </section>
+        
+        
+        <!-- My services-->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I Do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Problem Solving + Analysis</h3>
+                    <p>My greatest belief is that everything is achieveable. All problems can be solved,  
+                        all challenges overcome, and all muddles unmuddled. With the appropriate analytical techniques, 
+                        I can break down and compartmentalize obstacles into bite sized and achieveable problem statements.
+                        I ensure all affected parties are equitably represented, and constructive resolutions and positive
+                        solutions are found and implemented. My capabilities are enhanced by maintaining an Agile
+                        approach to problem solving and I also bring effective leadership, communication, and teamwork skills
+                        to any group setting I find myself in.</p>
+                </div><!-- / service-->
+                
+                <div class="service">
+                    <h3>Software Development + Mathematics</h3>
+                    <p>In life, there are dreamers, and there are executors. As a youth, I was undoubtedly a dreamer, but with
+                        age I have learned to execute. To improve my execution, I strive to constantly
+                        advance my technical skillset which heavily encompasses learning new software
+                        languages, increasing the complexity and depth of my ability with each, and developing
+                        my scope of application. Initially, a Matlab and C user, I have grown my capabilities to include 
+                        JavaScript, CSS, and HTML and my future pursuits include C++, Python, SQL and others. 
+                        My capabilities extend to include structural and geotechnical analysis, and mathematic 
+                        modelling, mathematic problem solving, and data analysis.</p>
+                </div><!-- / service-->
+                
+                <div class="service">
+                    <h3>Consulting</h3>
+                    <p>With keen social skills, a friendly smile, and a fun personality, I thrive in social environments.
+                        I thoroughly enjoy interacting with interesting clients and value making consultation a fun,
+                    constructive, and positive environment. I find building relationships to be a highly rewarding
+                    aspect of work, developing my network both internally and externally. I love discussing ideas
+                    and the energy that can come from collaboration over a shared goal. I feel I can make people feel
+                    heard, listened to and understood which is a valuable experience for any clientelle. People trust
+                    me to achieve the outcomes of our conversations and I can guarantee I will.</p>
+                </div><!-- / service-->
+            </div><!-- / services-->
+            
+            <a href="#work" class="btn">My Work</a>
+        </section>
+        
+        
+        <!-- About Me-->
+        
+        <section class="about-me" id="about"> 
+            <h2 class="section__title section__title--about">Who I Am</h2>
+            <p class="section__subtitle section__subtitle--about">a kiwi in a foreign land</p>
+            
+            <div class="about-me__body">
+                <p>
+                    Historically, I have been described as "a flexible expert" and "an unconvential thinker".
+                     I have a cool, calm, and collected temperament and my personal values include being
+                     a kind, caring, and empathetic individual. I believe in positivity and take pride 
+                     in my ability to get a smile out of anyone. I have a tragically lame sense of humour, 
+                    am a marathon runner, and a connoisseur of comfort food. I love fantasy novels, videogames,
+                    sports, family, friends, sunrises, sunsets, and corgis.
+                </p>
+                <p>
+                    "If James was any more laid back, he'd fall over" - Lucy (tutoring student).
+                </p>
+                <p>
+                    "A bit of a dork" - Bridget (James' sister).
+                </p>
+            </div>
+            
+            <img src="img/resume.jpg" alt="Mum says blue brings out my eyes." class="about-me__img">
+        </section>
+        
+        <!-- My Work-->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My Work</h2>
+            <p class="section__subtitle section__subtitle--work">click to see more :)</p>
+            
+            <div class="portfolio">
+                <!-- Central Interceptor -->
+                <a href="subcentralinterceptor.html" class="portfolio__item">
+                    <img src="img/centralinterceptor.jpg" alt="Central Interceptor wastewater upgrade." class="portfolio__img">
+                </a>
+                
+                 <!-- Halfmoonbay -->
+                <a href="subhalfmoonbay.html" class="portfolio__item">
+                    <img src="img/halfmoonbay.jpg" alt="Design of a new marina breakwater." class="portfolio__img">
+                </a>
+                
+                 <!-- Hunua4 -->
+                <a href="subhunua4.html" class="portfolio__item">
+                    <img src="img/hunua4.JPG" alt="TBM breakthrough on final drive." class="portfolio__img">
+                </a>
+                
+                 <!-- calgary -->
+                <a href="subcalgary.html" class="portfolio__item">
+                    <img src="img/calgarysegmentallining.jpg" alt="A Tunnel Boring Machine (TBM)" class="portfolio__img">
+                </a>
+
+                 <!-- snells -->
+                 <a href="subsnells.html" class="portfolio__item">
+                    <img src="img/snells.PNG" alt="Design of a structural ballast system." class="portfolio__img">
+                </a>
+
+                <!-- Eglington -->
+                <a href="subeglinton.html" class="portfolio__item">
+                    <img src="img/eglinton.PNG" alt="What's next?" class="portfolio__img">
+                </a>
+
+                <!-- GoldenEars -->
+                <a href="subgoldenears.html" class="portfolio__item">
+                    <img src="img/goldenears.jpg" alt="What's next?" class="portfolio__img">
+                </a>
+
+                <!-- Northern Corridor -->
+                <a href="subnortherncorridor.html" class="portfolio__item">
+                    <img src="img/northerncorridor.JPG" alt="What's next?" class="portfolio__img">
+                </a>
+
+                 <!-- tutoring -->
+                 <a href="subtutoring.html" class="portfolio__item">
+                    <img src="img/tutoring.jpg" alt="Design of a structural balast system." class="portfolio__img">
+                </a>
+
+                 <!-- future -->
+                 <a href="subfuture.html" class="portfolio__item">
+                    <img src="img/practice.png" alt="What's next?" class="portfolio__img">
+                </a>
+
+                
+            </div>
+            
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!--  replace with your own email address-->
+            <a href="mailto:jamesmca@live.com" class="footer__link">jamesmca@live.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/jamezmcarthur" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.freecodecamp.org/jamesmca" target="_blank">
+                        <i class="fab fa-free-code-camp"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.instagram.com/smoljames" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/jamezmca" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io/jamezmca" target="_blank">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </footer>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
