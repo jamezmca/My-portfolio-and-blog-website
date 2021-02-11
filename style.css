@@ -212,10 +212,12 @@ header {
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
+    background: linear-gradient(to left, #ffd319, #ff2975 );
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-6px);
+    background: linear-gradient(to left, #ffd319, #ff2975 );
 }
 
 
@@ -232,11 +234,22 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
+
+}
+
+.hamburger {
+    background: linear-gradient(to bottom, #ffd319, #ff2975);
+}
+
+.hamburger::before {
+    background: #ff2975;
+}
+.hamburger::after {
+    background: #ffd319;
 }
 
 
