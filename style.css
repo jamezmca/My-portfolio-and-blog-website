@@ -282,6 +282,18 @@ header {
     box-shadow: var(--bs);
 }
 
+.intro__icons {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 2em 10em -1em;
+    width: 50%;
+    padding: 0;
+
+}
+.intro__icon {
+    max-width: 50px;
+}
+
 
 
 @media (min-width: 600px){
@@ -352,6 +364,10 @@ header {
 .service {
     max-width: 500px;
     margin: 0 auto;
+}
+
+.skills__list {
+    text-align: left;
 }
 
 @media (min-width: 800px){
