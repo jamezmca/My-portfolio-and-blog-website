@@ -353,7 +353,7 @@ header {
 
 .intro__icons {
     position: relative;
-    
+    background-color:white;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
