@@ -6,15 +6,16 @@
 
 /* custom properties, update these for my own design*/ 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary:  'Source Code Pro', monospace;
+    --ff-primary: 'Cairo', sans-serif;
+    --ff-secondary: 'Cairo', sans-serif;
+    --ff-tertiary: 'Cairo', sans-serif;
     
     --fw-reg: 300;
     --fw-bold: 900;
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #4e97d3;
+    --clr-accent: hsl(192, 84%, 70%);
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -50,6 +51,12 @@ body {
     line-height: 1.6;
 }
 
+.body-content {
+    margin: 0 auto;
+    max-width: 1500px;
+    position: relative;
+}
+
 section {
     padding: 5em 2em;
 }
@@ -83,6 +90,7 @@ strong { font-weight: var(--fw-bold)}
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
+    border-radius: 7px;
 }
 
 
@@ -125,7 +133,7 @@ h3 { font-size: var(--fs-h3)}
 .section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary); 
+    font-family: var(--ff-tertiary); 
     margin-bottom: 1em;
 }
 
@@ -148,7 +156,12 @@ header {
 
 .logo {
     max-width: 50px;
+    transition: 200ms;
 
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .nav {
@@ -194,7 +207,7 @@ header {
 .nav-toggle {
     padding: .5em;
     background: transparent;
-    border: 0;
+    border: none;
     cursor: pointer;
     position: absolute;
     right: 1em;
@@ -234,7 +247,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    width: 2em;
+    width: 1.5em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
@@ -263,8 +276,21 @@ header {
     
 }
 
-.hamburger::before {top: 6px;}
-.hamburger::after {bottom: 6px;}
+.hamburger::before {top: 7px;}
+.hamburger::after {bottom: 7px;}
+
+.nav-toggle:hover .hamburger {
+    box-shadow: 0 0 2px 1px gold;
+  }
+  
+  .nav-toggle:hover .hamburger:before {
+    box-shadow: 0 0 2px 1px gold;
+  }
+  
+  .nav-toggle:hover .hamburger:after {
+    box-shadow: 0 0 2px 1px gold;
+  }
+  
 
 
 
@@ -276,6 +302,7 @@ header {
 
 .intro {
     position: relative;
+    padding-top: 3em;
 }
 
 .intro__img {
@@ -333,6 +360,7 @@ header {
 .section__title--services {
     color: var(--clr-accent);
     position: relative;
+    font-family: var(--ff-tertiary); 
 
 }
 
@@ -340,11 +368,11 @@ header {
 .section__title--services::after {
     content: '';
     display: block;
-    width: 2em;
-    height: 1px;
+    width: 2.5em;
+    height: 3px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
-    opacity: 0.25;
+    opacity: 0.3;
 }
 
 .services {
@@ -360,9 +388,10 @@ header {
     margin: 1em auto 2em;
     width: 50%;
     padding: 0;
-    
-
+    border-radius: 16px;
+    box-shadow: 0 0 2px 2px black;
 }
+
 .intro__icon {
     max-width: 15%;
     
@@ -445,17 +474,49 @@ header {
 }
 
 
+[data-tab-content] {
+    display: none;
+}
 
-
-.portfolio {
+.active[data-tab-content] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid white;
+    font-family: var(--ff-secondary);
     
 }
 
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    transition: 200ms;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.tab.active {
+    text-shadow: 0 0 4px white;
+    transform: scale(1.2);
+}
+
+.tab:hover {
+    text-shadow: 0 0 4px white;
+    transform: scale(1.2);
+}
+
+
 .portfolio__item {
-    background: var(--clr-accent);
+    background: black;
     overflow: hidden;
+    position: relative;
 
 }
 
@@ -463,8 +524,7 @@ header {
     position: relative;
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-   
+        opacity 250ms linear;   
 }
 
 
@@ -480,18 +540,53 @@ header {
 }
 
 
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .portfolio__item:hover .overlay {
+    opacity: 1;
+  }
+
+
 /* the blog */
 
 .the-blog {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     text-align: center;
+    padding-top: 3em;
 }
 
 .blog {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     
+}
+
+.section__title--blog {
+    margin-bottom: 1em;
+}
+
+.section__title--blog::after {
+    content: '';
+    display: block;
+    width: 2.5em;
+    height: 3px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-dark);
+    opacity: 0.5;
 }
 
 .blog__item {
