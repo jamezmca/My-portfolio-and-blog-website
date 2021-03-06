@@ -2,8 +2,11 @@ const navToggle = document.querySelector('.nav-toggle');
 
 const navLinks = document.querySelectorAll('.nav__link');
 
+const body = document.querySelector('.body-content');
 
-navToggle.addEventListener('click',() => {
+var j = 2;
+
+navToggle.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
 });
 
@@ -12,6 +15,13 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     })
 });
+
+if (navToggle.classList.contains('nav-open')) {
+    body.addEventListener('click', () => {
+        document.body.classList.toggle('nav-open');
+    });
+}
+
 
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
