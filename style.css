@@ -218,12 +218,10 @@ header {
 .nav-open .nav{
     display: block;
     opacity: 1;
-    position: fixed;
+    
 }
 
-.nav-open .nav-toggle {
-    position: fixed;
-}
+
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
@@ -296,7 +294,11 @@ header {
 
 
 
+.sections {
+    margin: 0;
+    padding: 0;
 
+}
 
 
 
@@ -473,6 +475,7 @@ header {
     background-color: rgba(5, 12, 18, 1);
     color: var(--clr-light);
     text-align: center;
+    padding-bottom: 0;
 }
 
 
@@ -509,9 +512,10 @@ header {
 }
 
 .tab.active {
-    text-shadow: 0 0 4px white;
+    text-shadow: 0 0 4px var(--clr-accent);
     transform: scale(1.2);
-    border-top: 2px solid white;    
+    border-top: 2px solid white; 
+      
 }
 
 .tab:hover {
@@ -689,6 +693,10 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.portfolio-item-individual img {
+    margin: 0 auto;
 }
 
 
