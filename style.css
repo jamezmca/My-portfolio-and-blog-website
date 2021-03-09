@@ -684,7 +684,8 @@ header {
 /* Individual portfolio item styles */
 
 .portfolio-item-individual {
-    padding: 0 2em 2em;
+    padding: 0 2em;
+    padding-bottom: 1em;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -697,6 +698,13 @@ header {
 
 .portfolio-item-individual img {
     margin: 0 auto;
+}
+
+.portfolio-scroll-image {
+    overflow: auto;
+    width: auto;
+    max-height: 600px;
+    box-shadow: 0 0 15px 1px grey;
 }
 
 
