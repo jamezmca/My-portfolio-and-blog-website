@@ -16,6 +16,7 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: hsl(192, 84%, 70%);
+    --clr-lineargrad: linear-gradient(135deg, #6e8efb, #a777e3);
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -79,10 +80,14 @@ strong { font-weight: var(--fw-bold)}
 /* buttons */
 
 .btn {
-    display: inline-block;
+    position: absolute;
     padding: .6em 2.7em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: darkslateblue;
     text-decoration: none;
     cursor: pointer;
     font-size: 0.8rem;
@@ -91,12 +96,21 @@ strong { font-weight: var(--fw-bold)}
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
     border-radius: 7px;
+    left: calc(50% - 75px);
+    bottom: 30px;
 }
 
 
 .btn:hover {
     transform: scale(1.1);
 }
+
+.btn:active {
+    color: white;
+    outline: none;
+    box-shadow: 0 0 4px 2px var(--clr-accent);
+}
+
 
 
 /* Typography */
@@ -389,7 +403,7 @@ header {
     display: flex;
     align-items: center;
     justify-content:space-evenly;
-    margin: 1em auto 2em;
+    margin: 1em auto 0em;
     width: 50%;
     padding: 0;
     border-radius: 16px;
